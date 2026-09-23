@@ -1,0 +1,4 @@
+#Wed Jun 24 01:01:43 WIB 2026
+base.0=D\:\\SEMESTER_8\\Banana\\frontend\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

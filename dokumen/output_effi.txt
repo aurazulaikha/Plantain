@@ -1,0 +1,139 @@
+Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run 'Import-Module PSReadLine'.
+
+PS D:\SEMESTER 7\PROJECT TA\Banana> & C:/Users/ACER/AppData/Local/Programs/Python/Python39/python.exe "d:/SEMESTER 7/PROJECT TA/Banana/model/model_efficientnet.py"
+2025-11-07 18:03:19.314177: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-07 18:03:26.303287: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Found 2029 files belonging to 4 classes.
+2025-11-07 18:03:54.115612: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 508 files belonging to 4 classes.
+Class Detected: ['cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
+2025-11-07 18:04:04.972641: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:16: Filling up shuffle buffer (this may take a while): 21 of 1000
+2025-11-07 18:04:15.257322: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:16: Filling up shuffle buffer (this may take a while): 43 of 1000
+2025-11-07 18:04:24.716001: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+2025-11-07 18:04:25.114864: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence     
+Class Weights: {0: np.float64(1.1272222222222221), 1: np.float64(1.1991725768321513), 2: np.float64(1.107532751091703), 3: np.float64(0.7267191977077364)}   
+Downloading data from https://storage.googleapis.com/keras-applications/efficientnetb2_notop.h5
+31790344/31790344 ━━━━━━━━━━━━━━━━━━━━ 10s 0us/step
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ efficientnetb2 (Functional)          │ (None, 9, 9, 1408)          │       7,768,569 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 1408)                │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization                  │ (None, 1408)                │           5,632 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 256)                 │         360,704 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 256)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 4)                   │           1,028 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 8,135,933 (31.04 MB)
+ Trainable params: 364,548 (1.39 MB)
+ Non-trainable params: 7,771,385 (29.65 MB)
+Epoch 1/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 113s 2s/step - accuracy: 0.7773 - loss: 0.5990 - val_accuracy: 0.9370 - val_loss: 0.2744
+Epoch 2/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 89s 1s/step - accuracy: 0.9621 - loss: 0.1118 - val_accuracy: 0.9390 - val_loss: 0.1890
+Epoch 3/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9692 - loss: 0.0943 - val_accuracy: 0.9606 - val_loss: 0.1324
+Epoch 1/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 113s 2s/step - accuracy: 0.7773 - loss: 0.5990 - val_accuracy: 0.9370 - val_loss: 0.2744
+Epoch 2/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 89s 1s/step - accuracy: 0.9621 - loss: 0.1118 - val_accuracy: 0.9390 - val_loss: 0.1890
+Epoch 3/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9692 - loss: 0.0943 - val_accuracy: 0.9606 - val_loss: 0.1324
+64/64 ━━━━━━━━━━━━━━━━━━━━ 113s 2s/step - accuracy: 0.7773 - loss: 0.5990 - val_accuracy: 0.9370 - val_loss: 0.2744
+Epoch 2/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 89s 1s/step - accuracy: 0.9621 - loss: 0.1118 - val_accuracy: 0.9390 - val_loss: 0.1890
+Epoch 3/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9692 - loss: 0.0943 - val_accuracy: 0.9606 - val_loss: 0.1324
+Epoch 2/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 89s 1s/step - accuracy: 0.9621 - loss: 0.1118 - val_accuracy: 0.9390 - val_loss: 0.1890
+Epoch 3/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9692 - loss: 0.0943 - val_accuracy: 0.9606 - val_loss: 0.1324
+Epoch 3/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9692 - loss: 0.0943 - val_accuracy: 0.9606 - val_loss: 0.1324
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9692 - loss: 0.0943 - val_accuracy: 0.9606 - val_loss: 0.1324
+Epoch 4/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 103s 2s/step - accuracy: 0.9828 - loss: 0.0549 - val_accuracy: 0.9646 - val_loss: 0.1222
+Epoch 4/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 103s 2s/step - accuracy: 0.9828 - loss: 0.0549 - val_accuracy: 0.9646 - val_loss: 0.1222
+Epoch 5/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 129s 2s/step - accuracy: 0.9918 - loss: 0.0301 - val_accuracy: 0.9567 - val_loss: 0.1298
+64/64 ━━━━━━━━━━━━━━━━━━━━ 129s 2s/step - accuracy: 0.9918 - loss: 0.0301 - val_accuracy: 0.9567 - val_loss: 0.1298
+Epoch 6/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 115s 2s/step - accuracy: 0.9928 - loss: 0.0234 - val_accuracy: 0.9724 - val_loss: 0.1307
+Epoch 7/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 88s 1s/step - accuracy: 0.9945 - loss: 0.0130 - val_accuracy: 0.9606 - val_loss: 0.1568
+Epoch 8/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 88s 1s/step - accuracy: 0.9966 - loss: 0.0113 - val_accuracy: 0.9626 - val_loss: 0.1624
+Epoch 9/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 104s 2s/step - accuracy: 0.9969 - loss: 0.0095 - val_accuracy: 0.9606 - val_loss: 0.1678
+Epoch 10/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 120s 2s/step - accuracy: 0.9920 - loss: 0.0213 - val_accuracy: 0.9626 - val_loss: 0.1635
+Epoch 11/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 96s 2s/step - accuracy: 0.9966 - loss: 0.0075 - val_accuracy: 0.9685 - val_loss: 0.1524
+Epoch 12/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 102s 2s/step - accuracy: 0.9980 - loss: 0.0077 - val_accuracy: 0.9705 - val_loss: 0.1906
+Epoch 13/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 147s 2s/step - accuracy: 0.9965 - loss: 0.0197 - val_accuracy: 0.9547 - val_loss: 0.2573
+Epoch 14/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 112s 2s/step - accuracy: 0.9947 - loss: 0.0173 - val_accuracy: 0.9567 - val_loss: 0.2771
+Epoch 15/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9950 - loss: 0.0148 - val_accuracy: 0.9646 - val_loss: 0.2353
+Epoch 16/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 91s 1s/step - accuracy: 0.9970 - loss: 0.0095 - val_accuracy: 0.9665 - val_loss: 0.2187
+Epoch 17/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 90s 1s/step - accuracy: 0.9959 - loss: 0.0134 - val_accuracy: 0.9646 - val_loss: 0.1906
+Epoch 18/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 88s 1s/step - accuracy: 0.9921 - loss: 0.0253 - val_accuracy: 0.9705 - val_loss: 0.1879
+Epoch 19/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 87s 1s/step - accuracy: 0.9934 - loss: 0.0251 - val_accuracy: 0.9547 - val_loss: 0.2702
+Epoch 20/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 121s 2s/step - accuracy: 0.9912 - loss: 0.0212 - val_accuracy: 0.9646 - val_loss: 0.1972
+Epoch 21/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 142s 2s/step - accuracy: 0.9950 - loss: 0.0138 - val_accuracy: 0.9685 - val_loss: 0.2396
+Epoch 22/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 790s 13s/step - accuracy: 0.9905 - loss: 0.0295 - val_accuracy: 0.9587 - val_loss: 0.2537
+Epoch 23/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 107s 2s/step - accuracy: 0.9934 - loss: 0.0197 - val_accuracy: 0.9449 - val_loss: 0.3801
+Epoch 24/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 93s 1s/step - accuracy: 0.9941 - loss: 0.0232 - val_accuracy: 0.9587 - val_loss: 0.2898
+Epoch 25/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 89s 1s/step - accuracy: 0.9894 - loss: 0.0370 - val_accuracy: 0.9567 - val_loss: 0.2692
+Epoch 26/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 91s 1s/step - accuracy: 0.9921 - loss: 0.0326 - val_accuracy: 0.9646 - val_loss: 0.2914
+Epoch 27/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 87s 1s/step - accuracy: 0.9895 - loss: 0.0432 - val_accuracy: 0.9508 - val_loss: 0.2876
+Epoch 28/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 87s 1s/step - accuracy: 0.9955 - loss: 0.0190 - val_accuracy: 0.9665 - val_loss: 0.2039
+Epoch 29/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 122s 2s/step - accuracy: 0.9956 - loss: 0.0135 - val_accuracy: 0.9606 - val_loss: 0.2166
+Epoch 30/30
+64/64 ━━━━━━━━━━━━━━━━━━━━ 120s 2s/step - accuracy: 0.9973 - loss: 0.0188 - val_accuracy: 0.9685 - val_loss: 0.1915
+Found 508 files belonging to 4 classes.
+2025-11-07 19:08:17.441015: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+16/16 ━━━━━━━━━━━━━━━━━━━━ 38s 2s/step 
+
+=== Laporan Klasifikasi ===
+                precision    recall  f1-score   support
+
+       cordana       0.97      0.96      0.97       112
+       healthy       0.98      0.95      0.97       106
+pestalotiopsis       0.94      0.97      0.95       115
+      sigatoka       0.98      0.98      0.98       175
+
+      accuracy                           0.97       508
+     macro avg       0.97      0.97      0.97       508
+  weighted avg       0.97      0.97      0.97       508
+
+
+ Akurasi akhir (Training): 99.66%
+ Akurasi akhir (Validasi): 96.85%
+PS D:\SEMESTER 7\PROJECT TA\Banana> 

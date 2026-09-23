@@ -1,0 +1,147 @@
+PS D:\SEMESTER 7\PROJECT TA\Banana> & C:/Users/ACER/AppData/Local/Programs/Python/Python39/python.exe "d:/SEMESTER 7/PROJECT TA/Banana/model/model_effiHype.py"
+2025-11-17 16:04:12.628193: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-17 16:04:17.052640: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Found 2029 files belonging to 4 classes.
+2025-11-17 16:04:33.248996: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 508 files belonging to 4 classes.
+Class Detected: ['cordana', 'healthy', 'pestalotiopsis', 'sigatoka']
+2025-11-17 16:04:37.045895: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Class Weights: {0: np.float64(1.1272222222222221), 1: np.float64(1.1991725768321513), 2: np.float64(1.107532751091703), 3: np.float64(0.7267191977077364)}
+
+Search: Running Trial #1
+
+Value             |Best Value So Far |Hyperparameter
+512               |512               |units
+0.3               |0.3               |dropout
+0.0001            |0.0001            |learning_rate
+
+WARNING:tensorflow:From C:\Users\ACER\AppData\Local\Programs\Python\Python39\lib\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+Epoch 1/3
+2025-11-17 16:05:05.458794: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:16: Filling up shuffle buffer (this may take a while): 26 of 1000
+2025-11-17 16:05:20.256329: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+64/64 ━━━━━━━━━━━━━━━━━━━━ 131s 1s/step - accuracy: 0.5649 - loss: 1.0991 - val_accuracy: 0.8484 - val_loss: 0.6768
+Epoch 2/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 91s 1s/step - accuracy: 0.8852 - loss: 0.2810 - val_accuracy: 0.9173 - val_loss: 0.4284
+Epoch 3/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 91s 1s/step - accuracy: 0.9437 - loss: 0.1638 - val_accuracy: 0.9272 - val_loss: 0.2997
+
+Trial 1 Complete [00h 05m 17s]
+val_accuracy: 0.9271653294563293
+
+Best val_accuracy So Far: 0.9271653294563293
+Total elapsed time: 00h 05m 17s
+
+Search: Running Trial #2
+
+Value             |Best Value So Far |Hyperparameter
+256               |512               |units
+0.4               |0.3               |dropout
+0.0001            |0.0001            |learning_rate
+
+Epoch 1/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 109s 2s/step - accuracy: 0.5128 - loss: 1.3370 - val_accuracy: 0.8268 - val_loss: 0.7372
+Epoch 2/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 110s 2s/step - accuracy: 0.8525 - loss: 0.4289 - val_accuracy: 0.9016 - val_loss: 0.4824
+Epoch 3/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 107s 2s/step - accuracy: 0.9040 - loss: 0.2792 - val_accuracy: 0.9193 - val_loss: 0.3339
+
+Trial 2 Complete [00h 05m 28s]
+val_accuracy: 0.9192913174629211
+
+Best val_accuracy So Far: 0.9271653294563293
+Total elapsed time: 00h 10m 45s
+
+Search: Running Trial #3
+
+Value             |Best Value So Far |Hyperparameter
+320               |512               |units
+0.3               |0.3               |dropout
+0.01              |0.0001            |learning_rate
+
+Epoch 1/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 119s 2s/step - accuracy: 0.7921 - loss: 2.2369 - val_accuracy: 0.8169 - val_loss: 1.0092
+Epoch 2/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 94s 1s/step - accuracy: 0.9533 - loss: 0.5919 - val_accuracy: 0.8760 - val_loss: 1.1518
+Epoch 3/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 94s 1s/step - accuracy: 0.9499 - loss: 0.8008 - val_accuracy: 0.9173 - val_loss: 0.8718
+
+Trial 3 Complete [00h 05m 10s]
+val_accuracy: 0.9173228144645691
+
+Best val_accuracy So Far: 0.9271653294563293
+Total elapsed time: 00h 15m 55s
+
+Search: Running Trial #4
+
+Value             |Best Value So Far |Hyperparameter
+320               |512               |units
+0.3               |0.3               |dropout
+0.001             |0.0001            |learning_rate
+
+Epoch 1/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 111s 2s/step - accuracy: 0.7828 - loss: 0.5897 - val_accuracy: 0.8898 - val_loss: 0.2999
+Epoch 2/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 93s 1s/step - accuracy: 0.9697 - loss: 0.0826 - val_accuracy: 0.9291 - val_loss: 0.2103
+Epoch 3/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 152s 2s/step - accuracy: 0.9845 - loss: 0.0514 - val_accuracy: 0.9449 - val_loss: 0.1724
+
+Trial 4 Complete [00h 06m 00s]
+val_accuracy: 0.9448819160461426
+
+Best val_accuracy So Far: 0.9448819160461426
+Total elapsed time: 00h 21m 54s
+
+Search: Running Trial #5
+
+Value             |Best Value So Far |Hyperparameter
+128               |320               |units
+0.3               |0.3               |dropout
+0.01              |0.001             |learning_rate
+
+Epoch 1/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 172s 2s/step - accuracy: 0.7683 - loss: 1.5388 - val_accuracy: 0.8543 - val_loss: 0.4301
+Epoch 2/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 128s 2s/step - accuracy: 0.9430 - loss: 0.3569 - val_accuracy: 0.9449 - val_loss: 0.1840
+Epoch 3/3
+64/64 ━━━━━━━━━━━━━━━━━━━━ 144s 2s/step - accuracy: 0.9635 - loss: 0.1830 - val_accuracy: 0.9232 - val_loss: 0.3117
+
+Trial 5 Complete [00h 07m 31s]
+val_accuracy: 0.9448819160461426
+
+Best val_accuracy So Far: 0.9448819160461426
+Total elapsed time: 00h 29m 25s
+Best hyperparameters: Units=320, Dropout=0.30000000000000004, Learning Rate=0.001
+Epoch 1/15
+64/64 ━━━━━━━━━━━━━━━━━━━━ 110s 2s/step - accuracy: 0.7728 - loss: 0.6375 - val_accuracy: 0.9055 - val_loss: 0.3288
+Epoch 2/15
+64/64 ━━━━━━━━━━━━━━━━━━━━ 106s 2s/step - accuracy: 0.9698 - loss: 0.0833 - val_accuracy: 0.9213 - val_loss: 0.2077
+Epoch 3/15
+64/64 ━━━━━━━━━━━━━━━━━━━━ 127s 2s/step - accuracy: 0.9879 - loss: 0.0354 - val_accuracy: 0.9528 - val_loss: 0.1530
+Epoch 4/15
+64/64 ━━━━━━━━━━━━━━━━━━━━ 128s 2s/step - accuracy: 0.9937 - loss: 0.0190 - val_accuracy: 0.9606 - val_loss: 0.1206
+Epoch 5/15
+64/64 ━━━━━━━━━━━━━━━━━━━━ 271s 4s/step - accuracy: 0.9951 - loss: 0.0152 - val_accuracy: 0.9606 - val_loss: 0.1295
+Epoch 6/15
+64/64 ━━━━━━━━━━━━━━━━━━━━ 93s 1s/step - accuracy: 0.9956 - loss: 0.0158 - val_accuracy: 0.9606 - val_loss: 0.1430
+Epoch 7/15
+64/64 ━━━━━━━━━━━━━━━━━━━━ 92s 1s/step - accuracy: 0.9925 - loss: 0.0251 - val_accuracy: 0.9626 - val_loss: 0.1530
+2025-11-17 16:50:53.290376: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+16/16 ━━━━━━━━━━━━━━━━━━━━ 25s 1s/step 
+
+=== Laporan Klasifikasi ===
+                precision    recall  f1-score   support
+
+       cordana       0.96      0.96      0.96       112
+       healthy       1.00      0.92      0.96       106
+pestalotiopsis       0.90      0.97      0.93       115
+      sigatoka       0.98      0.99      0.99       175
+
+      accuracy                           0.96       508
+     macro avg       0.96      0.96      0.96       508
+  weighted avg       0.96      0.96      0.96       508
+
+
+Akurasi akhir (Training): 99.01%
+Akurasi akhir (Validasi): 96.26%

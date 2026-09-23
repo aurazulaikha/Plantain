@@ -1,0 +1,174 @@
+PS D:\SEMESTER_7\PROJECT_TA\Banana> & C:/Users/ACER/AppData/Local/Programs/Python/Python39/python.exe d:/SEMESTER_7/PROJECT_TA/Banana/model/model_effiHype2.py
+2026-04-16 13:16:32.624073: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-04-16 13:16:34.654938: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Found 2746 files belonging to 5 classes.
+2026-04-16 13:16:39.952228: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE3 SSE4.1 SSE4.2 AVX AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Found 687 files belonging to 5 classes.
+Classes Detected: ['cordana', 'healthy', 'no_leaf', 'pestalotiopsis', 'yellow_sigatoka']
+2026-04-16 13:16:46.054000: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+Class Weights: {0: np.float64(1.1635593220338982), 1: np.float64(1.1094949494949495), 2: np.float64(1.111740890688259), 3: np.float64(0.9859964093357271), 4: np.float64(0.7543956043956044)}
+Model: "sequential_1"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ efficientnetb2 (Functional)          │ (None, 9, 9, 1408)          │       7,768,569 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 1408)                │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ batch_normalization                  │ (None, 1408)                │           5,632 │
+│ (BatchNormalization)                 │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 256)                 │         360,704 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 256)                 │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (None, 5)                   │           1,285 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 8,136,190 (31.04 MB)
+ Trainable params: 3,339,473 (12.74 MB)
+ Non-trainable params: 4,796,717 (18.30 MB)
+Epoch 1/30
+2026-04-16 13:17:18.087868: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 62 of 1000
+2026-04-16 13:17:21.222914: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 198s 2s/step - accuracy: 0.2502 - loss: 2.5233 - val_accuracy: 0.4585 - val_loss: 1.8123
+Epoch 2/30
+2026-04-16 13:20:16.518006: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 62 of 1000
+2026-04-16 13:20:19.652094: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 175s 2s/step - accuracy: 0.4585 - loss: 1.9030 - val_accuracy: 0.6259 - val_loss: 1.5331
+Epoch 3/30
+2026-04-16 13:23:11.541598: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 63 of 1000
+2026-04-16 13:23:14.668340: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 175s 2s/step - accuracy: 0.6218 - loss: 1.4881 - val_accuracy: 0.7365 - val_loss: 1.2761
+Epoch 4/30
+2026-04-16 13:26:06.107794: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 65 of 1000
+2026-04-16 13:26:08.626286: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 171s 2s/step - accuracy: 0.6713 - loss: 1.2893 - val_accuracy: 0.8035 - val_loss: 1.0920
+Epoch 5/30
+2026-04-16 13:28:56.862722: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 65 of 1000
+2026-04-16 13:28:59.512482: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 170s 2s/step - accuracy: 0.7477 - loss: 1.1206 - val_accuracy: 0.8282 - val_loss: 0.9815
+Epoch 6/30
+2026-04-16 13:31:47.420448: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 64 of 1000
+2026-04-16 13:31:49.954305: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 169s 2s/step - accuracy: 0.7628 - loss: 1.0637 - val_accuracy: 0.8530 - val_loss: 0.9099
+Epoch 7/30
+2026-04-16 13:34:36.401881: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 66 of 1000
+2026-04-16 13:34:38.910192: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 170s 2s/step - accuracy: 0.8135 - loss: 0.9522 - val_accuracy: 0.8646 - val_loss: 0.8605
+Epoch 8/30
+2026-04-16 13:37:26.761877: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 65 of 1000
+2026-04-16 13:37:29.297518: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 170s 2s/step - accuracy: 0.8490 - loss: 0.8767 - val_accuracy: 0.8748 - val_loss: 0.8192
+Epoch 9/30
+2026-04-16 13:40:17.130215: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 66 of 1000
+2026-04-16 13:40:19.591299: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 168s 2s/step - accuracy: 0.8437 - loss: 0.8600 - val_accuracy: 0.8792 - val_loss: 0.7890
+Epoch 10/30
+2026-04-16 13:43:05.794313: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 64 of 1000
+2026-04-16 13:43:08.486167: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 170s 2s/step - accuracy: 0.8634 - loss: 0.8206 - val_accuracy: 0.8821 - val_loss: 0.7598
+Epoch 11/30
+2026-04-16 13:45:55.290796: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 65 of 1000
+2026-04-16 13:45:57.876771: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 166s 2s/step - accuracy: 0.8746 - loss: 0.7780 - val_accuracy: 0.8879 - val_loss: 0.7440
+Epoch 12/30
+2026-04-16 13:48:41.582428: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 65 of 1000
+2026-04-16 13:48:43.985643: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 165s 2s/step - accuracy: 0.8919 - loss: 0.7665 - val_accuracy: 0.8981 - val_loss: 0.7283
+Epoch 13/30
+2026-04-16 13:51:26.178034: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 65 of 1000
+2026-04-16 13:51:28.902590: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 166s 2s/step - accuracy: 0.8894 - loss: 0.7448 - val_accuracy: 0.9068 - val_loss: 0.7114
+Epoch 14/30
+2026-04-16 13:54:12.268445: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 66 of 1000
+2026-04-16 13:54:14.772454: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 165s 2s/step - accuracy: 0.8983 - loss: 0.7176 - val_accuracy: 0.9112 - val_loss: 0.6952
+Epoch 15/30
+2026-04-16 13:56:57.370504: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 64 of 1000
+2026-04-16 13:57:00.112910: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 171s 2s/step - accuracy: 0.9045 - loss: 0.6926 - val_accuracy: 0.9141 - val_loss: 0.6825
+Epoch 16/30
+2026-04-16 13:59:48.561654: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 62 of 1000
+2026-04-16 13:59:51.607528: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 168s 2s/step - accuracy: 0.9140 - loss: 0.6687 - val_accuracy: 0.9185 - val_loss: 0.6695
+Epoch 17/30
+2026-04-16 14:02:36.514798: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 63 of 1000
+2026-04-16 14:02:39.467023: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 169s 2s/step - accuracy: 0.9139 - loss: 0.6820 - val_accuracy: 0.9199 - val_loss: 0.6594
+Epoch 18/30
+2026-04-16 14:05:25.174993: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 61 of 1000
+2026-04-16 14:05:28.256463: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 184s 2s/step - accuracy: 0.9290 - loss: 0.6415 - val_accuracy: 0.9272 - val_loss: 0.6500
+Epoch 19/30
+2026-04-16 14:08:29.554975: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 25 of 1000
+2026-04-16 14:08:39.995179: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 54 of 1000
+2026-04-16 14:08:50.727086: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 196s 2s/step - accuracy: 0.9240 - loss: 0.6526 - val_accuracy: 0.9316 - val_loss: 0.6422
+Epoch 20/30
+2026-04-16 14:11:45.384410: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 64 of 1000
+2026-04-16 14:11:48.151450: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 194s 2s/step - accuracy: 0.9326 - loss: 0.6245 - val_accuracy: 0.9345 - val_loss: 0.6299
+Epoch 21/30
+2026-04-16 14:15:00.514168: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 25 of 1000
+2026-04-16 14:15:19.940588: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 81 of 1000
+2026-04-16 14:15:20.837986: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 188s 2s/step - accuracy: 0.9423 - loss: 0.5999 - val_accuracy: 0.9418 - val_loss: 0.6234
+Epoch 22/30
+2026-04-16 14:18:07.070796: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 63 of 1000
+2026-04-16 14:18:10.059779: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 203s 2s/step - accuracy: 0.9394 - loss: 0.6119 - val_accuracy: 0.9447 - val_loss: 0.6136
+Epoch 23/30
+2026-04-16 14:21:30.529812: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 26 of 1000
+2026-04-16 14:21:50.260518: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 80 of 1000
+2026-04-16 14:21:51.142974: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 187s 2s/step - accuracy: 0.9404 - loss: 0.6106 - val_accuracy: 0.9476 - val_loss: 0.6048
+Epoch 24/30
+2026-04-16 14:24:37.317608: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 63 of 1000
+2026-04-16 14:24:40.321020: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 200s 2s/step - accuracy: 0.9378 - loss: 0.6117 - val_accuracy: 0.9491 - val_loss: 0.6007
+Epoch 25/30
+2026-04-16 14:27:57.744844: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 26 of 1000
+2026-04-16 14:28:17.575872: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 81 of 1000
+2026-04-16 14:28:18.470374: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 252s 3s/step - accuracy: 0.9370 - loss: 0.5948 - val_accuracy: 0.9476 - val_loss: 0.5930
+Epoch 26/30
+2026-04-16 14:32:19.740850: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 25 of 1000
+2026-04-16 14:34:17.257753: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 47 of 1000
+2026-04-16 14:34:23.513505: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 304s 2s/step - accuracy: 0.9348 - loss: 0.6145 - val_accuracy: 0.9534 - val_loss: 0.5880
+Epoch 27/30
+2026-04-16 14:37:13.199489: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 63 of 1000
+2026-04-16 14:37:16.025715: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 203s 2s/step - accuracy: 0.9515 - loss: 0.5823 - val_accuracy: 0.9549 - val_loss: 0.5832
+Epoch 28/30
+2026-04-16 14:40:36.799786: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 25 of 1000
+2026-04-16 14:40:47.002585: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 54 of 1000
+2026-04-16 14:40:57.643431: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 214s 2s/step - accuracy: 0.9550 - loss: 0.5728 - val_accuracy: 0.9534 - val_loss: 0.5794
+Epoch 29/30
+2026-04-16 14:44:10.409013: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 64 of 1000
+2026-04-16 14:44:13.105896: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 177s 2s/step - accuracy: 0.9575 - loss: 0.5525 - val_accuracy: 0.9592 - val_loss: 0.5754
+Epoch 30/30
+2026-04-16 14:47:07.132930: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:452] ShuffleDatasetV3:15: Filling up shuffle buffer (this may take a while): 45 of 1000
+2026-04-16 14:47:12.949884: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:482] Shuffle buffer filled.
+86/86 ━━━━━━━━━━━━━━━━━━━━ 171s 2s/step - accuracy: 0.9492 - loss: 0.5677 - val_accuracy: 0.9578 - val_loss: 0.5704
+2026-04-16 14:51:21.294031: I tensorflow/core/framework/local_rendezvous.cc:407] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+22/22 ━━━━━━━━━━━━━━━━━━━━ 32s 1s/step 
+
+=== CLASSIFICATION REPORT ===
+                 precision    recall  f1-score   support
+
+        cordana       0.97      0.94      0.96       118
+        healthy       0.98      0.96      0.97       124
+        no_leaf       0.93      1.00      0.96       124
+ pestalotiopsis       0.91      0.97      0.94       139
+yellow_sigatoka       1.00      0.93      0.96       182
+
+       accuracy                           0.96       687
+      macro avg       0.96      0.96      0.96       687
+   weighted avg       0.96      0.96      0.96       687
+
+PS D:\SEMESTER_7\PROJECT_TA\Banana> 

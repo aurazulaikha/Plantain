@@ -1,0 +1,310 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.plantain"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:3:5-65
+11-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:3:22-62
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:4:5-66
+12-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:4:22-64
+13    <!--
+14         Required to query activities that can process text, see:
+15         https://developer.android.com/training/package-visibility and
+16         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+17
+18         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+19    -->
+20    <queries>
+20-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:42:5-55:15
+21        <intent>
+21-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:43:9-46:18
+22            <action android:name="android.intent.action.PROCESS_TEXT" />
+22-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:44:13-72
+22-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:44:21-70
+23
+24            <data android:mimeType="text/plain" />
+24-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:45:13-50
+24-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:45:19-48
+25        </intent>
+26        <intent>
+26-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:47:9-50:18
+27            <action android:name="android.intent.action.VIEW" />
+27-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:48:13-65
+27-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:48:21-62
+28
+29            <data android:scheme="http" />
+29-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:45:13-50
+29-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:49:19-40
+30        </intent>
+31        <intent>
+31-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:51:9-54:18
+32            <action android:name="android.intent.action.VIEW" />
+32-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:48:13-65
+32-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:48:21-62
+33
+34            <data android:scheme="https" />
+34-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:45:13-50
+34-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:49:19-40
+35        </intent>
+36    </queries>
+37
+38    <uses-feature android:name="android.hardware.camera.any" />
+38-->[:camera_android_camerax] D:\SEMESTER_8\Banana\frontend\build\camera_android_camerax\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-64
+38-->[:camera_android_camerax] D:\SEMESTER_8\Banana\frontend\build\camera_android_camerax\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:19-61
+39
+40    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+40-->[:camera_android_camerax] D:\SEMESTER_8\Banana\frontend\build\camera_android_camerax\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:5-71
+40-->[:camera_android_camerax] D:\SEMESTER_8\Banana\frontend\build\camera_android_camerax\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:22-68
+41    <uses-permission
+41-->[:camera_android_camerax] D:\SEMESTER_8\Banana\frontend\build\camera_android_camerax\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:5-13:38
+42        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+42-->[:camera_android_camerax] D:\SEMESTER_8\Banana\frontend\build\camera_android_camerax\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:9-65
+43        android:maxSdkVersion="28" />
+43-->[:camera_android_camerax] D:\SEMESTER_8\Banana\frontend\build\camera_android_camerax\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:9-35
+44    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+45
+46    <permission
+46-->[androidx.core:core:1.13.1] C:\Users\ACER\.gradle\caches\8.10.2\transforms\dfc2fbca530748e569b0737b09fa016f\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+47        android:name="com.example.plantain.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+47-->[androidx.core:core:1.13.1] C:\Users\ACER\.gradle\caches\8.10.2\transforms\dfc2fbca530748e569b0737b09fa016f\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+48        android:protectionLevel="signature" />
+48-->[androidx.core:core:1.13.1] C:\Users\ACER\.gradle\caches\8.10.2\transforms\dfc2fbca530748e569b0737b09fa016f\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+49
+50    <uses-permission android:name="com.example.plantain.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+50-->[androidx.core:core:1.13.1] C:\Users\ACER\.gradle\caches\8.10.2\transforms\dfc2fbca530748e569b0737b09fa016f\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+50-->[androidx.core:core:1.13.1] C:\Users\ACER\.gradle\caches\8.10.2\transforms\dfc2fbca530748e569b0737b09fa016f\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+51    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+52
+53    <application
+54        android:name="android.app.Application"
+54-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:7:9-42
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.13.1] C:\Users\ACER\.gradle\caches\8.10.2\transforms\dfc2fbca530748e569b0737b09fa016f\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+56        android:extractNativeLibs="false"
+57        android:icon="@mipmap/ic_launcher"
+57-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:8:9-43
+58        android:label="Plantain" >
+58-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:6:9-33
+59        <activity
+59-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:9:9-30:20
+60            android:name="com.example.plantain.MainActivity"
+60-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:10:13-41
+61            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+61-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:15:13-163
+62            android:exported="true"
+62-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:11:13-36
+63            android:hardwareAccelerated="true"
+63-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:16:13-47
+64            android:launchMode="singleTop"
+64-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:12:13-43
+65            android:taskAffinity=""
+65-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:13:13-36
+66            android:theme="@style/LaunchTheme"
+66-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:14:13-47
+67            android:windowSoftInputMode="adjustResize" >
+67-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:17:13-55
+68
+69            <!--
+70                 Specifies an Android theme to apply to this Activity as soon as
+71                 the Android process has started. This theme is visible to the user
+72                 while the Flutter UI initializes. After that, this theme continues
+73                 to determine the Window background behind the Flutter UI.
+74            -->
+75            <meta-data
+75-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:22:13-25:17
+76                android:name="io.flutter.embedding.android.NormalTheme"
+76-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:23:15-70
+77                android:resource="@style/NormalTheme" />
+77-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:24:15-52
+78
+79            <intent-filter>
+79-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:26:13-29:29
+80                <action android:name="android.intent.action.MAIN" />
+80-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:27:17-68
+80-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:27:25-66
+81
+82                <category android:name="android.intent.category.LAUNCHER" />
+82-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:28:17-76
+82-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:28:27-74
+83            </intent-filter>
+84        </activity>
+85        <!--
+86             Don't delete the meta-data below.
+87             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+88        -->
+89        <meta-data
+89-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:33:9-35:33
+90            android:name="flutterEmbedding"
+90-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:34:13-44
+91            android:value="2" />
+91-->D:\SEMESTER_8\Banana\frontend\android\app\src\main\AndroidManifest.xml:35:13-30
+92
+93        <service
+93-->[androidx.camera:camera-camera2:1.5.0-beta01] C:\Users\ACER\.gradle\caches\8.10.2\transforms\9c9d3231ef370c78e77e4431beaf6406\transformed\jetified-camera-camera2-1.5.0-beta01\AndroidManifest.xml:24:9-33:19
+94            android:name="androidx.camera.core.impl.MetadataHolderService"
+94-->[androidx.camera:camera-camera2:1.5.0-beta01] C:\Users\ACER\.gradle\caches\8.10.2\transforms\9c9d3231ef370c78e77e4431beaf6406\transformed\jetified-camera-camera2-1.5.0-beta01\AndroidManifest.xml:25:13-75
+95            android:enabled="false"
+95-->[androidx.camera:camera-camera2:1.5.0-beta01] C:\Users\ACER\.gradle\caches\8.10.2\transforms\9c9d3231ef370c78e77e4431beaf6406\transformed\jetified-camera-camera2-1.5.0-beta01\AndroidManifest.xml:26:13-36
+96            android:exported="false" >
+96-->[androidx.camera:camera-camera2:1.5.0-beta01] C:\Users\ACER\.gradle\caches\8.10.2\transforms\9c9d3231ef370c78e77e4431beaf6406\transformed\jetified-camera-camera2-1.5.0-beta01\AndroidManifest.xml:27:13-37
+97            <meta-data
+97-->[androidx.camera:camera-camera2:1.5.0-beta01] C:\Users\ACER\.gradle\caches\8.10.2\transforms\9c9d3231ef370c78e77e4431beaf6406\transformed\jetified-camera-camera2-1.5.0-beta01\AndroidManifest.xml:30:13-32:89
+98                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+98-->[androidx.camera:camera-camera2:1.5.0-beta01] C:\Users\ACER\.gradle\caches\8.10.2\transforms\9c9d3231ef370c78e77e4431beaf6406\transformed\jetified-camera-camera2-1.5.0-beta01\AndroidManifest.xml:31:17-103
+99                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+99-->[androidx.camera:camera-camera2:1.5.0-beta01] C:\Users\ACER\.gradle\caches\8.10.2\transforms\9c9d3231ef370c78e77e4431beaf6406\transformed\jetified-camera-camera2-1.5.0-beta01\AndroidManifest.xml:32:17-86
+100        </service>
+101
+102        <provider
+102-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-17:20
+103            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+103-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-82
+104            android:authorities="com.example.plantain.flutter.image_provider"
+104-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-74
+105            android:exported="false"
+105-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
+106            android:grantUriPermissions="true" >
+106-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
+107            <meta-data
+107-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+108                android:name="android.support.FILE_PROVIDER_PATHS"
+108-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+109                android:resource="@xml/flutter_image_picker_file_paths" />
+109-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+110        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+111        <service
+111-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:9-31:19
+112            android:name="com.google.android.gms.metadata.ModuleDependencies"
+112-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:13-78
+113            android:enabled="false"
+113-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-36
+114            android:exported="false" >
+114-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:13-37
+115            <intent-filter>
+115-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:24:13-26:29
+116                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+116-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:17-94
+116-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:25-91
+117            </intent-filter>
+118
+119            <meta-data
+119-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-30:36
+120                android:name="photopicker_activity:0:required"
+120-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:17-63
+121                android:value="" />
+121-->[:image_picker_android] D:\SEMESTER_8\Banana\frontend\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-33
+122        </service>
+123
+124        <activity
+124-->[:url_launcher_android] D:\SEMESTER_8\Banana\frontend\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-11:74
+125            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+125-->[:url_launcher_android] D:\SEMESTER_8\Banana\frontend\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-74
+126            android:exported="false"
+126-->[:url_launcher_android] D:\SEMESTER_8\Banana\frontend\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-37
+127            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+127-->[:url_launcher_android] D:\SEMESTER_8\Banana\frontend\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-71
+128
+129        <uses-library
+129-->[androidx.window:window:1.2.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\aed2861b2b6894f7067df3f3f96b791f\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+130            android:name="androidx.window.extensions"
+130-->[androidx.window:window:1.2.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\aed2861b2b6894f7067df3f3f96b791f\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+131            android:required="false" />
+131-->[androidx.window:window:1.2.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\aed2861b2b6894f7067df3f3f96b791f\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+132        <uses-library
+132-->[androidx.window:window:1.2.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\aed2861b2b6894f7067df3f3f96b791f\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+133            android:name="androidx.window.sidecar"
+133-->[androidx.window:window:1.2.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\aed2861b2b6894f7067df3f3f96b791f\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+134            android:required="false" />
+134-->[androidx.window:window:1.2.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\aed2861b2b6894f7067df3f3f96b791f\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+135
+136        <provider
+136-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\bb10008c4b33ee9597583412a41828ed\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+137            android:name="androidx.startup.InitializationProvider"
+137-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\bb10008c4b33ee9597583412a41828ed\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+138            android:authorities="com.example.plantain.androidx-startup"
+138-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\bb10008c4b33ee9597583412a41828ed\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+139            android:exported="false" >
+139-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\bb10008c4b33ee9597583412a41828ed\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+140            <meta-data
+140-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\bb10008c4b33ee9597583412a41828ed\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+141                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+141-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\bb10008c4b33ee9597583412a41828ed\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+142                android:value="androidx.startup" />
+142-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\bb10008c4b33ee9597583412a41828ed\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+143            <meta-data
+143-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+144                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+144-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+145                android:value="androidx.startup" />
+145-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+146        </provider>
+147
+148        <receiver
+148-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+149            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+149-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+150            android:directBootAware="false"
+150-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+151            android:enabled="true"
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+152            android:exported="true"
+152-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+153            android:permission="android.permission.DUMP" >
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+154            <intent-filter>
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+155                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+155-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+155-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+156            </intent-filter>
+157            <intent-filter>
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+158                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+158-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+158-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+159            </intent-filter>
+160            <intent-filter>
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+161                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+161-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+161-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+162            </intent-filter>
+163            <intent-filter>
+163-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+164                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+164-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+164-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\53e65cb99d6b4f80573625ff2ea53dae\transformed\jetified-profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+165            </intent-filter>
+166        </receiver>
+167        <!--
+168 Applications that target Android S+ require explicit declaration of
+169             any referenced vendor-provided libraries.
+170        -->
+171        <uses-native-library
+171-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:8:9-10:40
+172            android:name="libOpenCL.so"
+172-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:9:13-40
+173            android:required="false" />
+173-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:10:13-37
+174        <uses-native-library
+174-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:8:9-10:40
+175            android:name="libOpenCL-car.so"
+175-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:9:13-40
+176            android:required="false" />
+176-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:10:13-37
+177        <uses-native-library
+177-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:8:9-10:40
+178            android:name="libOpenCL-pixel.so"
+178-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:9:13-40
+179            android:required="false" />
+179-->[com.google.ai.edge.litert:litert-gpu-api:1.4.0] C:\Users\ACER\.gradle\caches\8.10.2\transforms\2dd851038dbd3f331bbceec0f367ef5a\transformed\jetified-litert-gpu-api-1.4.0\AndroidManifest.xml:10:13-37
+180    </application>
+181
+182</manifest>
